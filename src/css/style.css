@@ -1,8 +1,246 @@
-#app {
-    font-family: Avenir, Helvetica, Arial, sans-serif;
-    -webkit-font-smoothing: antialiased;
-    -moz-osx-font-smoothing: grayscale;
-    text-align: center;
-    color: #2c3e50;
-    margin-top: 60px;
+* {
+    box-sizing: border-box;
+    font-family: Open sans, sans-serif;
+    font-size: 14px;
+}
+
+.btn-close {
+    background: url('/src/assets/close.svg') no-repeat;
+    font-size: 20px;
+    text-decoration: none;
+    padding: 11px;
+    position: absolute;
+    right: 31px;
+    top: 31px;
+}
+
+.btn-close:hover {
+    color: #919191;
+}
+
+.modal::before {
+    content: '';
+    display: none;
+    background: #1c1819;
+    opacity: 0.6;
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    z-index: 10;
+}
+
+.opened::before {
+    display: block;
+}
+
+.opened .modal-dialog {
+    -webkit-transform: translate(0, 0);
+    -ms-transform: translate(0, 0);
+    transform: translate(0, 0);
+    top: 20%;
+}
+
+.modal-dialog {
+    border: #333 solid 0;
+    margin: 0 auto;
+    z-index: 11;
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    margin-left: -520px;
+    width: 1039px;
+    background: #fff;
+    border-radius: 16px;
+    -webkit-transform: translate(0, -500%);
+    -ms-transform: translate(0, -500%);
+    transform: translate(0, -500%);
+    -webkit-transition: -webkit-transform 0.3s ease-out;
+    -moz-transition: -moz-transform 0.3s ease-out;
+    -o-transition: -o-transform 0.3s ease-out;
+    transition: transform 0.3s ease-out;
+    padding: 56px;
+    padding-bottom: 46px;
+    color: #1c1819;
+}
+
+.modal-content {
+    display: flex;
+    flex-direction: row;
+}
+
+.modal-preview {
+    display: flex;
+    flex-direction: column;
+}
+
+.preview-additional {
+    width: 330px;
+    display: flex;
+    margin-top: 16px;
+    align-items: center;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.preview-additional img {
+    width: 50px;
+    height: 50px;
+    border-radius: 8px;
+}
+
+.preview-additional a {
+    padding-right: 7px;
+}
+
+.active-preview {
+    border: 1px solid #2a81dd;
+}
+
+.modal-order {
+    padding-left: 24px;
+    padding-bottom: 8px;
+}
+
+.modal-header {
+    font-style: normal;
+    font-weight: 400;
+    font-size: 20px;
+    line-height: 14px;
+}
+
+.modal-points {
+    font-style: normal;
+    font-weight: 600;
+    font-size: 20px;
+}
+
+.button {
+    margin-top: -7px;
+    border: 0;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    padding-left: 37px;
+    padding-right: 37px;
+    font-size: 14px;
+    color: #fff;
+    box-shadow: 0 2px 4px rgba(28, 24, 25, 0.1);
+    border-radius: 8px;
+    cursor: pointer;
+}
+
+.blue {
+    background: #2a81dd;
+}
+
+.modal-balance {
+    position: fixed;
+    right: 56px;
+    top: 112px;
+    border-radius: 16px;
+    width: 196px;
+    height: 70px;
+    padding-left: 16px;
+    background: #f0fafd url('/src/assets/pointBalance.svg') no-repeat;
+    background-position-x: 140px;
+    background-position-y: 15px;
+}
+
+.modal-balance p {
+    color: #888b94;
+}
+
+.modal-balance span {
+    display: block;
+    font-size: 16px;
+    color: #1c1819;
+    margin-top: 12px;
+}
+
+.modal-colors-header,
+.modal-size-header {
+    margin-top: 26px;
+    font-weight: 400;
+}
+
+.modal-size-header {
+    margin-top: 18px;
+}
+
+.modal-details-header {
+    margin-top: 22px;
+    font-weight: 600;
+}
+
+.modal-add-details-header {
+    margin-top: 31px;
+    font-weight: 600;
+}
+
+.modal-order input[type='radio'] {
+    opacity: 0;
+    position: fixed;
+    width: 0;
+}
+
+.modal-order label {
+    display: inline-block;
+    padding: 8px;
+    padding-right: 14px;
+    font-family: sans-serif, Arial;
+    font-size: 16px;
+    border: 1px solid rgba(28, 24, 25, 0.1);
+    border-radius: 8px;
+    color: #2a81dd;
+    margin-right: 3px;
+    margin-bottom: 8px;
+    cursor: pointer;
+}
+
+.radioColors {
+    display: flex;
+    align-content: center;
+    align-items: center;
+}
+
+.radioColors > span {
+    border-radius: 4px;
+    width: 23px;
+    height: 24px;
+    display: block;
+    margin-right: 8px;
+}
+
+.radio-blue {
+    background: #00458a;
+}
+
+.radio-beige {
+    background: #efe8d8;
+}
+
+.radio-gray {
+    background: #d4d4da;
+}
+
+.modal-order input[type='radio']:checked + label {
+    background-color: #d6ecfb;
+    border-color: #d6ecfb;
+    color: #1c1819
+}
+
+.modal-order label:hover {
+    background-color: #d6ecfb;
+}
+
+.modal-size label {
+    margin-top: -1px;
+    padding-left: 13px;
+    padding-right: 13px;
+}
+
+.modal-order .details {
+    margin-top: -2px;
+    letter-spacing: 0.06mm;
 }
