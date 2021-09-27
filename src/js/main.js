@@ -14,14 +14,14 @@ document.querySelector('#app').innerHTML = `
                 </div>
             </div>
             <div class="modal-order">
-                <h3 class="modal-header">Футболка "Эволюционируй или сдохни"</h3>
+                <h2 class="modal-header">Футболка "Эволюционируй или сдохни"</h2>
                 <h3 class="modal-points">100 баллов</h3>
                 <button class="button blue" type="submit">Заказать</button>
                 <div class="modal-balance">
                     <p>Твой баланс:<span>3 945 баллов</span></p>
                 </div>
                 <div class="modal-merch-colors">
-                    <h3 class="modal-colors-header">Цвета:</h3>
+                    <h4 class="modal-colors-header normal-weight">Цвета:</h4>
 
                     <div class="modal-radio-colors">
                         <input type="radio" id="radioBlue" name="radioColors" value="blue" checked>
@@ -43,7 +43,7 @@ document.querySelector('#app').innerHTML = `
                         </label>
                     </div>
 
-                    <h3 class="modal-size-header">Размер:</h3>
+                    <h4 class="modal-size-header normal-weight">Размер:</h4>
                     <div class="modal-size">
                         <input type="radio" id="radioS" name="radioSize" value="S" checked>
                         <label for="radioS">S</label>
@@ -55,10 +55,10 @@ document.querySelector('#app').innerHTML = `
                         <label for="radioL">L</label>
                     </div>
 
-                    <h3 class="modal-details-header">Детали:</h3>
+                    <h4 class="modal-details-header bold-weight">Детали:</h4>
                     <p class="details">Брендированная толстовка от Qazaq Republic. Материал: Хлопок 80%, Вискоза 20%</p>
 
-                    <h3 class="modal-add-details-header">Как выбрать размер:</h3>
+                    <h4 class="modal-add-details-header bold-weight">Как выбрать размер:</h4>
                     <p class="add-details">Написать дяде Рику для уточнения.</p>
                 </div>
             </div>

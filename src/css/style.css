@@ -5,13 +5,14 @@
 }
 
 .btn-close {
-    background: url('/src/assets/close.svg') no-repeat;
+    background: url('../assets/close.png') no-repeat;
     font-size: 20px;
     text-decoration: none;
-    padding: 11px;
+    width: 32px;
+    height: 32px;
     position: absolute;
-    right: 31px;
-    top: 31px;
+    right: 24px;
+    top: 24px;
 }
 
 .btn-close:hover {
@@ -114,10 +115,14 @@
     font-style: normal;
     font-weight: 600;
     font-size: 20px;
+    margin-bottom: 8px;
+}
+
+.modal-merch-colors {
+    padding-top: 9px;
 }
 
 .button {
-    margin-top: -7px;
     border: 0;
     padding-top: 10px;
     padding-bottom: 10px;
@@ -142,40 +147,37 @@
     width: 196px;
     height: 70px;
     padding-left: 16px;
-    background: #f0fafd url('/src/assets/pointBalance.svg') no-repeat;
+    background: #f0fafd url('../assets/pointBalance.png') no-repeat;
     background-position-x: 140px;
-    background-position-y: 15px;
+    background-position-y: 12px;
 }
 
 .modal-balance p {
     color: #888b94;
+    margin-top: 8px;
 }
 
 .modal-balance span {
     display: block;
     font-size: 16px;
     color: #1c1819;
-    margin-top: 12px;
+    margin-top: 8px;
 }
 
-.modal-colors-header,
-.modal-size-header {
-    margin-top: 26px;
+.normal-weight {
     font-weight: 400;
 }
 
-.modal-size-header {
-    margin-top: 18px;
-}
-
-.modal-details-header {
-    margin-top: 22px;
+.bold-weight {
     font-weight: 600;
 }
 
+.modal-colors-header,
+.modal-size-header,
+.modal-details-header,
 .modal-add-details-header {
-    margin-top: 31px;
-    font-weight: 600;
+    margin-top: 15px;
+    margin-bottom: 5px;
 }
 
 .modal-order input[type='radio'] {
@@ -235,12 +237,6 @@
 }
 
 .modal-size label {
-    margin-top: -1px;
     padding-left: 13px;
     padding-right: 13px;
-}
-
-.modal-order .details {
-    margin-top: -2px;
-    letter-spacing: 0.06mm;
 }
